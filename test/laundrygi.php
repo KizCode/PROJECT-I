@@ -64,15 +64,12 @@
                 $hasil = "Uang Anda Tidak Cukukp";
             }
 		}
-        
-        
-        
 		?>
     <div class="output">
         <table>
             <u><b class="tm">Struk Laundry</b></u>
             <tr>
-                <td><?php time(); ?></td>
+                <td><?= date("l"); ?></td>
             </tr>
             <tr>
                 <td><br></td>
