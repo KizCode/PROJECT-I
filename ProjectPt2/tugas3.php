@@ -41,16 +41,16 @@ $pro = [
 move_to_top($pro, '34');
 move_to_top($pro, '31');
 move_to_top($pro, '32');
+
+function move_to_top(&$array, $key) {
+    $temp = array($key => $array[$key]);
+    unset($array[$key]);
+    $array = $temp + $array;
+}
+
+
 move_to_bottom($pro, '13');
 move_to_bottom($pro, '11');
-    
-    function move_to_top(&$array, $key) {
-        $temp = array($key => $array[$key]);
-        unset($array[$key]);
-        $array = $temp + $array;
-    }
-    
-    
     function move_to_bottom(&$array, $key) {
         $value = $array[$key];
         unset($array[$key]);
